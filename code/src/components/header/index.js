@@ -8,11 +8,14 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <label className="hamburger" for="hamburger">
-            <div className="hamburgerIcon"></div>
-            <div className="hamburgerIcon"></div>
-            <div className="hamburgerIcon"></div>
-        </label>
+        <div className="headerRow">
+          <label className="hamburger" for="hamburger">
+            <div className="iconContainer">
+              <div className="hamburgerIcon"></div>
+              <div className="hamburgerIcon"></div>
+              <div className="hamburgerIcon"></div>
+            </div>
+          </label>
           <input
             id="hamburger"
             type="checkbox"
@@ -23,6 +26,7 @@ class Header extends React.Component {
             <a href="http://technigo.io">Stories</a>
             <a href="http://technigo.io">About</a>
           </Grid>
+        </div>
       </header>
     )
   }
