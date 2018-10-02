@@ -9,17 +9,16 @@ class Header extends React.Component {
     return (
       <header>
         <div className="headerRow">
-          <label className="hamburger" for="hamburger">
-            <div className="iconContainer">
-              <div className="hamburgerIcon"></div>
-              <div className="hamburgerIcon"></div>
-              <div className="hamburgerIcon"></div>
-            </div>
-          </label>
           <input
             id="hamburger"
             type="checkbox"
             className="hamburger-checkbox"/>
+          <label className="hamburgerLabel" for="hamburger">
+            <div className="bar1"></div>
+              <div className="bar2"></div>
+              <div className="bar3"></div>
+          </label>
+
           <Grid className="header-grid">
             <a href="http://technigo.io">Technigo</a>
             <a href="http://technigo.io">Boot Camp</a>

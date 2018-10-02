@@ -14,9 +14,6 @@ header a {
   padding: 10px;
 }
 
-.headerRow {
-}
-
 .header-grid {
   display: flex;
   justify-content: space-between;
@@ -24,12 +21,12 @@ header a {
   transition: left 0.3s ease-out;
 }
 
-.hamburger {
+.hamburgerLabel {
   padding-left: 20px;
   position: absolute;
 }
 
-.hamburgerIcon {
+.bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
   background-color: #FE3525;
@@ -42,14 +39,24 @@ header a {
   display: none;
 }
 
-.hamburger-checkbox:checked + .header-grid {
+.hamburger-checkbox:checked ~ .header-grid {
   left: 0;
 }
 
+.hamburger-checkbox:checked ~ .hamburgerLabel .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
 
+.hamburger-checkbox:checked ~ .hamburgerLabel .bar2 {
+ opacity: 0;
+}
+
+.hamburger-checkbox:checked ~ .hamburgerLabel .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
 
 @media (max-width: 600px) {
-  .hamburgerIcon {
+  .bar1, .bar2, .bar3 {
     display: block;
     position: relative;
   }
